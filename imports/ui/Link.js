@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
+import { Accounts } from 'meteor/accounts-base';
 
 export default class Link extends React.Component {
     render() {
@@ -12,7 +12,7 @@ export default class Link extends React.Component {
     }
 
     logout() {
-        browserHistory.push('/');
+        Accounts.logout();
     }
 }
 
